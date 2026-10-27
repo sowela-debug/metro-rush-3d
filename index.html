@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Metro Rush 3D</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container"></div>
+
+    <div id="hud">
+
+        <div class="score-box">
+            SCORE
+            <span id="score">0</span>
+        </div>
+
+        <div class="coin-box">
+            🪙
+            <span id="coins">0</span>
+        </div>
+
+    </div>
+
+    <div id="start-screen" class="screen">
+
+        <h1>METRO RUSH 3D</h1>
+
+        <p>Run, dodge, jump and collect coins!</p>
+
+        <button id="start-btn">
+            PLAY GAME
+        </button>
+
+        <div class="instructions">
+
+            <p>⬅️ ➡️ Move</p>
+            <p>⬆️ Jump</p>
+            <p>⬇️ Slide</p>
+
+            <p>Mobile: Swipe to control</p>
+
+        </div>
+
+    </div>
+
+    <div id="game-over" class="screen hidden">
+
+        <h1>GAME OVER</h1>
+
+        <h2>
+            Score:
+            <span id="final-score">0</span>
+        </h2>
+
+        <h2>
+            Coins:
+            <span id="final-coins">0</span>
+        </h2>
+
+        <button id="restart-btn">
+            PLAY AGAIN
+        </button>
+
+    </div>
+
+    <script
+        type="module"
+        src="game.js">
+    </script>
+
+</body>
+</html>

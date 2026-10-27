@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    touch-action: none;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+#hud {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 10;
+    pointer-events: none;
+}
+
+.score-box,
+.coin-box {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score-box span {
+    color: #00ffcc;
+    margin-left: 10px;
+}
+
+.coin-box span {
+    color: gold;
+    margin-left: 10px;
+}
+
+.screen {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    z-index: 20;
+    text-align: center;
+}
+
+.screen h1 {
+    font-size: clamp(36px, 7vw, 65px);
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+.screen p {
+    margin: 10px;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    padding: 16px 45px;
+    margin-top: 25px;
+
+    background: linear-gradient(
+        45deg,
+        #00ffcc,
+        #00aaff
+    );
+
+    color: #111;
+    font-size: 22px;
+    font-weight: bold;
+
+    border-radius: 12px;
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+.instructions {
+    margin-top: 30px;
+    opacity: 0.8;
+}
+
+.instructions p {
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    #hud {
+        top: 12px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .score-box,
+    .coin-box {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
